@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+fieldset {
+    border: 2px solid #ddd;
+    padding: 20px;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.btn {
+    background-color: #B25D1D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #A93226;
+}
+
+.btn:hover {
+    background-color: #8A4D19;
+}
+
+.btn-danger:hover {
+    background-color: #922B21;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 40%;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 55%;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: none;
+    padding: 10px;
+}
+
+table tr td:first-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.table-container {
+    width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    overflow-y: auto;
+}
+
+#pizza-banner {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #5D4037;
+    color: white;
+    position: relative;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#commandeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+#commandeTable thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#commandeTable th, #commandeTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+#commandeTable tr:hover {
+    background-color: #f1f1f1;
+}

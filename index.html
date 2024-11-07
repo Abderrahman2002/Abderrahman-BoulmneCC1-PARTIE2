@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande de Pizzas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img id="pizza-banner" src="./img/images.jpeg" alt="Pizza Banner">
+
+    <div id="content-wrapper">
+        <fieldset>
+            <legend>Vente Pizza</legend>
+            <form id="pizzaForm">
+                <table>
+                    <tr>
+                        <td><label for="nom">Nom du client :</label></td>
+                        <td><input type="text" id="nom" name="nom" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="adresse">Adresse du client :</label></td>
+                        <td><input type="text" id="adresse" name="adresse" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pizza">Choisissez vos pizzas :</label></td>
+                        <td>
+                            <select id="pizza" name="pizza">
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="quantite">Quantité :</label></td>
+                        <td><input type="number" id="quantite" name="quantite" min="1" max="10" required></td>
+                    </tr>
+                </table>
+
+                <div class="center">
+                    <button type="button" class="btn" onclick="ajouter()">Ajouter</button>
+                    <button type="button" class="btn btn-danger" onclick="annuler()">Annuler</button>
+                </div>
+
+                <hr>
+                <div>
+                    <label for="paiement">Paiement Par :</label>
+                    <input type="radio" id="cb" name="paiement" value="CB" required onchange="toggleNumCarte()"> Carte bancaire
+                    <input type="radio" id="cheque" name="paiement" value="Cheque" onchange="toggleNumCarte()"> Chèque
+                </div>
+
+                <div class="form-group">
+                    <label for="numCarte">Numéro de la carte bancaire :</label>
+                    <input type="text" id="numCarte" name="numCarte" required disabled>
+                </div>
+
+                <div class="center">
+                    <button type="button" class="btn" onclick="envoyer()">Envoyer</button>
+                    <h3 class="center">Merci pour votre visite, le montant total est : <span id="totalFacture">0</span> DH</h3>
+                </div>
+            </form>
+        </fieldset>
+
+        <div class="table-container">
+            <h2>Les articles choisis :</h2>
+            <table id="commandeTable">
+                <thead>
+                    <tr>
+                        <th>Nom pizza</th>
+                        <th>Prix unitaire</th>
+                        <th>Quantité</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>@PIZZA HUT MAROC 2019/2020</p>
+    </footer>
+
+    <div id="orderSummaryModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal()">&times;</span>
+            <h2>Détails de la commande</h2>
+            <div id="orderDetails"></div>
+            <h3>Montant total : <span id="totalModal">0</span> DH</h3>
+            <button onclick="imprimer()">Imprimer</button>
+            <button onclick="fermerModal()">Quitter</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
